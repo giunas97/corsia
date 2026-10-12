@@ -1,0 +1,38 @@
+# Build backend (include il codice generato da openapi-generator)
+backend/target/
+backend/.mvn/wrapper/maven-wrapper.jar
+
+# Frontend (ridondante con frontend/.gitignore, ma protegge da commit dalla root)
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/
+frontend/coverage/
+
+# Configurazione locale e segreti
+.env
+.env.*
+!.env.example
+*.local.yaml
+application-local.yaml
+
+# Dati locali di Docker (se monti volumi su cartelle del repo)
+.docker-data/
+postgres-data/
+
+# IDE
+.idea/
+*.iml
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Log
+*.log
+logs/
+
+# Claude Code: impostazioni personali, non il CLAUDE.md
+.claude/settings.local.json
